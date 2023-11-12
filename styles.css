@@ -1,0 +1,183 @@
+/*---------- FUENTES ----------*/
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url('fonts/TrebuchetMS.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url('fonts/BebasNeue.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url('fonts/websymbols-regular-webfont.eot');
+    src: url('fonts/websymbols-regular-webfont.eot?#iefix') format("embedded-opentype"),
+         url('fonts/websymbols-regular-webfont.woff') format('woff'),
+         url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+         url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*---------- ESTILOS GENERALES ----------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url("img/pattern.png");
+}
+
+.wrap {
+    width: 1250px;
+    margin: 0px auto;
+}
+
+.icon {
+    font-family: "WebSymbolsRegular";
+}
+
+.gear {
+    font-family: "WebSymbolsRegular";/*para que salga el engranaje*/
+}
+
+/*---------- ESTILOS CABECERA ----------*/
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    font-family: "BebasNeue";
+    color: white;
+}
+
+#logo {
+    float: left;
+    width: 200px;
+    background-color: #37bcf9;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+#logo h3{
+    font-size: 40px;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-right: 65px;
+    transition: all 300ms;
+
+}
+
+#logo .gear {
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 26px;
+}
+
+/*---------- ESTILOS NAVEGACION ----------*/
+
+#menu {
+    float: right;
+    height: 70px;
+    background: transparent;
+}
+
+#menu ul li {
+    font-size: 24px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 70px;/*para qu se quede enmedio*/
+}
+
+#menu ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+#menu ul li a:hover {
+    color: #37bcf9;
+    transform: scale(1.2,1.2); /*cuando pases el cursor aumenta un poco sin cambiar los margenes*/
+}
+
+/*---------- ESTILOS BANNER ----------*/
+#banner {
+    width: 95.5%;
+    height: 100px;
+    background: url(img/bakbaner.png);
+    background-position: -200px, -200px;
+    border: 10px solid white;
+    box-shadow: 0px 0px 2px gray;
+    margin: 20px auto;
+}
+
+#banner h1 {
+    display: block;
+    width: 850px;
+    font-family: "BebasNeue";
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin:27px auto;
+    font-weight: normal;
+    text-shadow:2px 2px 1px black;
+}
+
+/*---------- ESTILOS TARJETAS ----------*/
+.card {
+    display: block;
+    float: left;
+    width: 205px;
+    height: 305px;
+    margin: 21.5px;
+    margin-top: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.card .icon{
+    display: block;
+    width: 100%;
+    height: 130px;
+    font-size: 50px;
+    line-height: 110px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.card .category {
+    width: 100%;
+    height: 50px;
+    font-family: "TrebuchetMS";
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #00538c;
+}
+
+.card .description {
+    text-align: center;
+    color: #0370b9;
+    font-family: "TrebuchetMS";
+    font-size: 15px;
+}
