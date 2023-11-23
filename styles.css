@@ -107,8 +107,9 @@ body {
     /*animacion del engranaje*/
     animation-name: rotate-gear;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
     animation-timing-function: linear;
+    /* animation: rotate-gear 2s linear;es lo mismo que las 3 lineas anteriores */
+    animation-iteration-count: infinite;
 }
 
 /*creacion de la animacion del engranaje*/
@@ -179,7 +180,20 @@ body {
     border: 10px solid white;
     box-shadow: 0px 0px 2px gray;
     margin: 20px auto;
+    overflow: hidden;
+    /**animacion del banner*/
+    animation: backBanner 10s linear;
 }
+
+@keyframes backBanner {/*hace que se mueva el fondo del banner hasta la posicion en la que esta*/
+    0% {
+        background-position: 0px 0px;/*cuando carge la pagina estará en la posicion normal*/
+    }
+    100% {
+        background-position: -200px, -200px;
+    }
+}
+
 
 #banner h1 {
     display: block;
@@ -192,6 +206,31 @@ body {
     margin:27px auto;
     font-weight: normal;
     text-shadow:2px 2px 1px black;
+    /*animacion de las letras del banner*/
+    animation: showText 10s linear;
+}
+/*con este efecto las letras se moveran de un lado a otro hasta posicionarse en su sitio*/
+@keyframes showText {
+    0% {
+        transform: translateX(-600%) scale(5,5);/*del 0 al 50 lo mueve de un lado a otro*/
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-600%) scale(5,5);/*vuelve otra vez a la posicion de la izquierda*/
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) scale(1,1);/*escala original*/
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
 }
 
 /*---------- ESTILOS TARJETAS ----------*/
