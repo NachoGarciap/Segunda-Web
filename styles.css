@@ -241,14 +241,19 @@ body {
     height: 305px;
     margin: 21.5px;
     margin-top: 40px;
-    overflow: hidden;
+    overflow: hidden;/*importante que lo tenga par alas animaciones*/
     border: 1px solid #ccc;
     box-shadow: 1px 1px 2px #ddd;
     background: white;
     cursor: pointer;
+    transition: all 300ms;
 }
 
-.card .icon{
+.card:hover {/*cambia el fondo de la tarjeta*/
+    background: black;
+}
+
+.card .icon {
     display: block;
     width: 100%;
     height: 130px;
@@ -256,6 +261,22 @@ body {
     line-height: 110px;
     text-align: center;
     margin: 0px auto;
+    transition: all 300ms;
+}
+
+.card:hover .icon {/*para que aumente el icono de la tarjeta*/
+    font-size: 70px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {/*animacion cae desde arriba*/
+    from {
+        transform: translateY(-200%);
+    }
+    to {
+        transform: translateY(0%);/*punto original*/
+    }
 }
 
 .card .category {
@@ -266,6 +287,22 @@ body {
     font-weight: bold;
     text-align: center;
     color: #00538c;
+    transition: all 300ms;
+}
+
+.card:hover .category {
+    color: white;
+    animation: showCategory 400ms linear;/*para que tarde un poco ma que el icono*/
+}
+
+@keyframes showCategory {
+    from {
+        transform: translateY(-300%);/*para que tarde un poco ma que el icono*/
+        color: black;
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .card .description {
@@ -273,6 +310,21 @@ body {
     color: #0370b9;
     font-family: "TrebuchetMS";
     font-size: 15px;
+}
+
+.card:hover .description {
+    color: white;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription {
+    from {
+        transform: translateX(-300%);
+        color: black;
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 
 /*---------- ESTILOS BARRA LATERAL ----------*/
