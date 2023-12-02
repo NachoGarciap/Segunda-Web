@@ -305,14 +305,9 @@
         float: none;
         margin: -10px;
         border-radius: 0px 0px 0px 0px;
-
     }
 
     #articles article h4 {
-        margin-top: 20px;
-        
+        margin-top: 20px;  
     }
-
-    
-
 }
